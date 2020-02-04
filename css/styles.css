@@ -27,10 +27,16 @@ h1 {
 	width: 90%;
 }
 
+.container-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
 header {
 	background: #f8f8f8;
-	padding: 2em 0;
-	text-align: center;
+	padding: 2em 0;	
 }
 
 nav ul {
@@ -41,7 +47,7 @@ nav ul {
 }
 
 nav li {
-	margin: 0 1em;
+	margin-left: 2em;
 }
 
 nav a {
@@ -64,3 +70,22 @@ nav a:hover, nav a:focus {
 	cursor: default;
 }
 
+
+@media (max-width: 675px) {
+	.container-nav {		
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	header {
+		text-align: center;
+	}
+
+	nav ul {
+		flex-direction: column;
+	}
+
+	nav li {
+		margin: .5em 0 ;
+	}
+}
