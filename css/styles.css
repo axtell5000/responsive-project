@@ -71,6 +71,16 @@ strong {
 	margin: 2em 0;
 }
 
+.widget-title,
+.widget-post-title {
+	font-size: 1rem;
+}
+
+.widget-title {
+	font-family: 'Ubuntu', sans-serif;	
+	font-weight: 700;
+}
+
 /* ------------Layout ------------  */
 
 .container {
@@ -92,6 +102,12 @@ header {
 	text-align: center;	
 }
 
+footer {
+	background: #143774;
+	color: white;
+	padding: 2.5em 0;
+	text-align: center;
+}
 
 
 /*--------------Navigation----------------*/
@@ -151,10 +167,48 @@ nav a:hover, nav a:focus {
 	order: 1; /* Ordering element - do it in the child of flex container */
 }
 
+/* ---------------  Widget area -------------*/
+.sidebar-widget {
+	border: 20px solid #efefef;
+	margin-bottom: 2em;
+	padding: 1em;
+}
+
+.widget-recent-post {
+	border-bottom: 1px solid #707070;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1em;
+}
+
+.widget-recent-post:last-child {
+	border: 0;
+	margin: 0;
+} 
+
+.widget-image {
+	order: -1;
+}
 
 /* Media queries */
 
 @media (min-width: 675px) {
+
+	.container-flex {		
+		flex-direction: row;	
+	}
+
+	
+	main {
+		width: 70%;
+	}
+
+	aside {
+		margin-left: 1em;
+		min-width: 200px;
+		width: 25%;
+	}
+
 	.article-recent {
 		flex-direction: row;
 		justify-content: space-between;
@@ -180,7 +234,7 @@ nav a:hover, nav a:focus {
 	}
 
 	.article-image {
-		order: -2; /**/
+		order: -2; /* this only works if its a child of an element that has display flex*/
 	}
 
 	.article-info {
